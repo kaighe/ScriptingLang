@@ -1,4 +1,5 @@
-var base_url = "http://207.81.219.142:1945/run/"
+//var base_url = "https://207.81.219.142:1945/run/"
+var base_url = "https://192.168.1.200:1945/run/"
 var running = false
 
 function run_code(){
@@ -19,7 +20,7 @@ function run_code(){
             output.innerText = data.out
             running = false
         }).catch(function(err) {
-            base_url = "http://192.168.1.200:1945/run/"
+            base_url = "https://192.168.1.200:1945/run/"
             fetch(base_url + code_url, {
                 mode: 'cors'
             }).then(function(response) {
