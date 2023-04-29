@@ -56,13 +56,24 @@ textarea {
 
 .run-button{
     height: 50px;
-    width: 100px;
+    width: fit-content;
+    text-align: left;
     font-size: 20pt;
     color:white;
     background-color: #acaf00;
     border: none;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .run-button:active{
     background-color: #8b8d00;
+}
+
+.running{
+    background-color: #757700;
+}
+
+.running:active{
+    background-color: #757700;
 }
