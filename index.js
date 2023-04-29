@@ -1,5 +1,5 @@
-//var base_url = "https://207.81.219.142:1945/run/"
-var base_url = "https://192.168.1.200:1945/run/"
+var base_url = "https://207.81.219.142:1945/run/"
+//var base_url = "https://192.168.1.200:1945/run/"
 var running = false
 
 function run_code(){
