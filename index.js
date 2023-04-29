@@ -38,6 +38,9 @@ function run_code(){
                 button_element.innerText = "Run"
                 output_element.scrollTo(0, output_element.scrollHeight);
             }).catch(function(err) {
+                running = false
+                button_element.classList.remove("running")
+                button_element.innerText = "Run"
                 alert("Servers are currently down.");
             });
         });
