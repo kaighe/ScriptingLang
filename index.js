@@ -24,6 +24,7 @@ function run_code(){
             running = false
             button_element.classList.remove("running")
             button_element.innerText = "Run"
+            output_element.scrollTo(0, output_element.scrollHeight);
         }).catch(function(err) {
             base_url = "https://192.168.1.200:1945/run/"
             fetch(base_url + code_url, {
@@ -35,6 +36,7 @@ function run_code(){
                 running = false
                 button_element.classList.remove("running")
                 button_element.innerText = "Run"
+                output_element.scrollTo(0, output_element.scrollHeight);
             }).catch(function(err) {
                 alert("Servers are currently down.");
             });

@@ -8,6 +8,7 @@ textarea {
     overflow-wrap: normal;
     overflow-x: scroll;
     border: none;
+    outline: none;
 }
 
 #input {
@@ -21,6 +22,7 @@ textarea {
     font-size: 12pt;
     background-color: #16113f;
     color: #acaf00;
+    overflow: scroll;
 }
 
 #output {
@@ -34,6 +36,7 @@ textarea {
     border: solid 1px black;
     background-color: #16113f;
     color: white;
+    overflow-y: scroll;
 }
 
 .container {
@@ -76,4 +79,29 @@ textarea {
 
 .running:active{
     background-color: #757700;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #16113f;
+}
+
+::-webkit-scrollbar-corner{
+    background: #16113f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #373163;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #443d79;
+    cursor: pointer;
 }
