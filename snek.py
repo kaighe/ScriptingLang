@@ -1,5 +1,4 @@
 from enum import Enum
-from pyscript import document
 
 class Lexer:
     opperators = [":", "+", "-", "*", "/", "=", "^"]
@@ -195,10 +194,3 @@ class Interpreter:
     def to_num(self, token):
         token = self.handel_var(token)
         return float(token.value)
-    
-input_text = document.querySelector("#input")
-code = input_text.innerText
-
-interpreter = Interpreter()
-interpreter.run(Parser.parse(code))
-print("hello world")
