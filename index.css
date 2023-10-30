@@ -1,6 +1,7 @@
 body {
     background-color: #110128;
     font-family: Consolas, monaco, monospace;
+    overflow: hidden;
 }
 
 textarea {
@@ -26,6 +27,7 @@ textarea {
 }
 
 #output {
+    white-space: pre;
     padding: 20px;
     padding-top: 10px;
     grid-column-start: 2;
