@@ -57,7 +57,7 @@ textarea {
     padding: 10px;
 }
 
-.run-button{
+#run-button{
     height: 50px;
     width: fit-content;
     text-align: left;
@@ -69,7 +69,7 @@ textarea {
     padding-right: 15px;
 }
 
-.run-button:active{
+#run-button:active{
     background-color: #8b8d00;
 }
 
