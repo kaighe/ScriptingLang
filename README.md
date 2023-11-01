@@ -10,4 +10,5 @@ I made a little online editor: https://scripting.kaialbertson.ca/
   - `a = (1+3)*5-2^2`
 - the print function
   - `print: 5`
+  - `print: variable`
 - yeah thats it
