@@ -5,40 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snekscript Online Editor</title>
     <link rel="stylesheet" href="index.css">
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
 
-    <py-env>
-        - paths:
-            - https://raw.githubusercontent.com/KaiSomething/ScriptingLang/main/snek.py
-    </py-env>
+    <py-config>
+        {
+            "files": {
+                "./snek.py": "./snek.py"
+            }
+        }
+    </py-config>
 </head>
 
 <body>
     <div class="container">
         <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="input">
-a = 5
-b = 4
+a = 6 - 1
+b = 8 / 2
 c = a + b
-print: c * 2</textarea>
+test = c
+
+print: test * 2
+print: 5^2</textarea>
 
         <div id="output"></div>
         <div class="button-holder">
-            <button id="run-button" pys-onClick="run_code" disabled>Loading...</button>
+            <button id="run-button" py-click="run_code" disabled>Loading...</button>
         </div>
     </div>
 
-    <py-script output="output" hidden>
+    <script type="py" target="output" hidden>
+        from pyscript import document, when, display
         import snek
+
         def run_code(e):
             interpreter = snek.Interpreter()
             interpreter.run(snek.Parser.parse(document.getElementById("input").value))
-            pyscript.write("output", interpreter.out)
+            display(interpreter.out, append=False)
 
         document.getElementById("run-button").innerText = "Run"
         document.getElementById("run-button").disabled = False
         run_code(1)
-    </py-script>
-
-    <script src="index.js"></script>
+    </script>
 </body>
 </html>
